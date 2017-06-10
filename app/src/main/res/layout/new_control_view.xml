@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!-- 自定义底部栏-->
+
+    <LinearLayout
+        android:id="@+id/lin_control"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shadow_player"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:src="@drawable/simple_player_arrow_white_24dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/lin_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp">
+
+
+                <EditText
+                    android:id="@+id/etInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:hint="在此输入你要说的话!"
+                    android:imeOptions="flagNoFullscreen"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:textColor="#888889"
+                    android:textColorHint="#c8c8c8"
+                    android:textSize="14sp" />
+
+
+                <Button
+                    android:id="@+id/btn_send"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_radius_right"
+                    android:text="发送弹幕"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+
+                <ImageView
+                    android:id="@+id/iv_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_card_giftcard_white_24dp" />
+
+                <ImageView
+                    android:id="@+id/iv_danmu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_chat" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:src="@drawable/ic_fullscreen" />
+    </LinearLayout>
+
+</RelativeLayout>

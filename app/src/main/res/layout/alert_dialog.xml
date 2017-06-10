@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_transparent"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <GridView
+            android:id="@+id/gv_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:horizontalSpacing="5dp"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:verticalSpacing="5dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剩余狗粮："
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_gift_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000000"
+                android:textColor="@color/grean" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical">
+
+
+            <Button
+                android:id="@+id/btn_gift"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_btn_login"
+                android:gravity="center"
+                android:text="赠送"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

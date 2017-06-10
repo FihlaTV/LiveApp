@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rlparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivgift"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:elevation="1dp"
+            android:src="@mipmap/ic_chicken" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="70dp"
+            android:paddingStart="50dp">
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:maxLength="6"
+                android:text="狗粮阿斯顿发斯蒂芬"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/send"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_gift_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="狗粮"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <com.hnust.liveapp.widget.MagicTextView
+        android:id="@+id/giftNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/rlparent"
+        android:layout_toRightOf="@+id/rlparent"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:text="X100000"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:outerShadowColor="@color/white"
+        app:strokeColor="@color/deepOrange"
+        app:strokeJoinStyle="round"
+        app:strokeWidth="3" />
+
+</RelativeLayout>

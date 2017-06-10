@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/live_bottom_box"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow_player"
+    android:gravity="center_vertical">
+
+
+    <LinearLayout
+        android:id="@+id/live_bottom_danmu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/live_fullscreen"
+        android:layout_toRightOf="@+id/live_play"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp">
+
+        <ImageView
+            android:id="@+id/iv_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@drawable/ic_card_giftcard_white_24dp" />
+
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="3"
+            android:background="@drawable/bg_radius_bottom_white"
+            android:text="发送弹幕"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.hnust.liveapp.widget.SwitchIconView
+                android:id="@+id/si_danmu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:si_animation_duration="500"
+                app:si_disabled_alpha=".3"
+                app:si_disabled_color="#b7b7b7"
+                app:si_enabled="true"
+                app:si_no_dash="false"
+                app:si_tint_color="@color/white"
+                app:srcCompat="@drawable/ic_chat" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/live_fullscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_fullscreen" />
+
+</RelativeLayout>
+

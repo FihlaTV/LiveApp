@@ -1,0 +1,104 @@
+<resources>
+    <!--界面标题-->
+    <string name="app_name">湖科大直播</string>
+    <string name="title_home">首页</string>
+    <string name="title_focus">关注</string>
+    <string name="title_live">直播</string>
+    <string name="title_my">我的</string>
+
+    <string name="settings">设置</string>
+    <string name="title_activity_login">登录</string>
+    <string name="title_activity_register">注册</string>
+
+    <!--登录-->
+    <string name="prompt_username">输入用户名</string>
+    <string name="prompt_nick">输入昵称</string>
+    <string name="prompt_password">输入密码</string>
+
+    <string name="to_register">快速注册</string>
+    <string name="prompt_logining">登录中...</string>
+    <string name="prompt_registering">注册中...</string>
+    <string name="other_login">其他登录方式</string>
+
+
+    <string name="action_clear">清空</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="error_invalid_email">用户名长度不正确,仅限于5-16个字符</string>
+    <string name="error_empty_user">请输入用户名</string>
+    <string name="error_empty_password">请输入密码</string>
+    <string name="error_invalid_password">密码长度不正确,仅限于6-32个字符</string>
+    <string name="error_incorrect_password">密码不正确</string>
+
+
+    <string name="message_welcome">文明科大人，文明直播，请大家文明发言，拒绝低俗言论</string>
+    <plurals name="message_participants">
+        <item quantity="one">there\'s %d participant</item>
+        <item quantity="other">there are %d participants</item>
+    </plurals>
+    <string name="message_user_joined">%s 进入房间</string>
+    <string name="message_user_left">%s 离开房间</string>
+    <string name="user_action_typing">正在输入</string>
+
+
+    <!--直播认证-->
+    <string name="live_know">主播认证须知</string>
+    <string name="prompt_user">教务网账号</string>
+    <string name="prompt_pw">密码</string>
+    <string name="prompt_auth">立即验证</string>
+
+    <!--反馈-->
+    <string name="prompt_content">有什么意见或想法，尽管提！</string>
+    <string name="prompt_feedback">提交</string>
+
+    <!--直播-->
+    <string name="prompt_live_start">开始直播</string>
+    <string name="prompt_live_topic">直播主题</string>
+    <string name="prompt_live_chat">输入聊天内容</string>
+    <string name="live_focus">关注</string>
+    <string name="live_chat">聊天</string>
+    <string name="live_send">发送</string>
+
+
+    <string name="str_video_hd">高清</string>
+    <string name="str_video_qhd">超高清</string>
+    <string name="str_video_sd">标清</string>
+    <string name="str_video_low">清晰</string>
+    <string name="buffering">缓冲中...</string>
+    <string name="error_server">服务器异常</string>
+
+    <!-- messages -->
+    <string name="connect">已连接聊天服务器</string>
+    <string name="disconnect">连接失败, 请检查网络</string>
+    <string name="error_connect">连接失败</string>
+    <string name="live_room_name">房间名:</string>
+    <string name="live_room_et">主播的直播间</string>
+    <string name="live_category">直播分类</string>
+    <string name="about">关于</string>
+    <string name="feedback">意见反馈</string>
+    <string name="logout">退出登录</string>
+    <string name="sign_message">公告:每日签到送礼物</string>
+    <string name="live_gift">狗粮</string>
+    <string name="user_img">头像</string>
+    <string name="nick">昵称</string>
+    <string name="sex">性别</string>
+    <string name="password">密码</string>
+    <string name="modify">修改</string>
+    <string name="replace">更换</string>
+    <string name="sign">签到</string>
+    <string name="cancel">取消</string>
+    <string name="positive">确定</string>
+    <string name="history">观看历史</string>
+    <string name="live">我要直播</string>
+    <string name="day_sign">每日签到</string>
+    <string name="send">送出</string>
+    <string name="user">用户</string>
+    <string name="live_user">主播名</string>
+    <string name="loading">正在努力加载中...</string>
+    <string name="about_app">Copyright ©2017 205宿舍. All Rights Reserved</string>
+    <string name="about_version">版本号：v</string>
+
+
+    <string name="error_internet">请检查网络连接是否正常</string>
+    <string name="lock">禁播列表</string>
+
+</resources>

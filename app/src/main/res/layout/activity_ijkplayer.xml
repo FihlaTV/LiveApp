@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.dl7.player.media.IjkPlayerView
+            android:id="@+id/player_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:elevation="1dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="当前房间人数：1"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btn_focus"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_btn_login"
+                    android:text="@string/live_focus"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_lock"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_btn_login"
+                    android:text="禁播"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_et_feedback"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_danmu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_et_feedback"
+                android:hint="@string/prompt_live_chat"
+                android:imeOptions="actionSend"
+                android:maxLength="30"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textColor="#888889"
+                android:textColorHint="#c8c8c8"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_send_msg"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_btn_login"
+                android:text="@string/live_send"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btn_send_gift"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_btn_login"
+                android:src="@drawable/ic_card_giftcard_white_24dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--礼物-->
+    <LinearLayout
+        android:id="@+id/llgiftcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical" />
+
+
+</RelativeLayout>

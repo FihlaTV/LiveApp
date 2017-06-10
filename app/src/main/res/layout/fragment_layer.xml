@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llpicimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_radius_top_black"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="45dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我是大师"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="123"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/dashi"
+                app:civ_border_color="@color/amber"
+                app:civ_border_width="1dp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_focus"
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_btn"
+            android:backgroundTint="@color/deepOrange"
+            android:text="关注"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <com.hnust.liveapp.widget.HorizontalListView
+            android:id="@+id/hlvaudience"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlsentimenttime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llpicimage"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00/00/00"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/live_message_gift"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp" />
+    <!--底部操作面板-->
+    <include layout="@layout/live_bar_room_bottom" />
+</RelativeLayout>
