@@ -1,10 +1,11 @@
 package com.hnust.liveapp.util;
 
+import android.annotation.SuppressLint;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.design.internal.BottomNavigationItemView;
-import android.support.design.internal.BottomNavigationMenuView;
-import android.support.design.widget.BottomNavigationView;
+import androidx.annotation.RequiresApi;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.lang.reflect.Field;
 
@@ -14,6 +15,7 @@ import java.lang.reflect.Field;
  */
 
 public class BottomNavigationViewHelper {
+    @SuppressLint("RestrictedApi")
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public static void disableShiftMode(BottomNavigationView navigationView) {
 
@@ -26,7 +28,7 @@ public class BottomNavigationViewHelper {
 
             for (int i = 0; i < menuView.getChildCount(); i++) {
                 BottomNavigationItemView itemView = (BottomNavigationItemView) menuView.getChildAt(i);
-                itemView.setShiftingMode(false);
+                itemView.setShifting(false);
                 itemView.setChecked(itemView.getItemData().isChecked());
             }
 

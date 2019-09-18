@@ -1,24 +1,19 @@
 package com.hnust.liveapp.ui.activitys;
 
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.textfield.TextInputLayout;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hnust.liveapp.R;
 import com.hnust.liveapp.contract.RegisterContract;
-import com.hnust.liveapp.presenter.LoginPresenterImpl;
 import com.hnust.liveapp.presenter.RegisterPresenterImpl;
-import com.hnust.liveapp.util.GlobalConfig;
 import com.hnust.liveapp.util.Md5Util;
 
 import butterknife.BindView;

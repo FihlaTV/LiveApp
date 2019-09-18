@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/live_top_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -18,7 +19,7 @@
             android:id="@+id/live_finish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/simple_player_chevron_left_white_36dp" />
+            app:srcCompat="@drawable/simple_player_chevron_left_white_36dp" />
 
         <TextView
             android:id="@+id/live_title"

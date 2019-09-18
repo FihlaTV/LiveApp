@@ -120,7 +120,7 @@
             android:layout_height="30dp"
             android:layout_margin="20dp"
             android:background="@drawable/bg"
-            android:src="@drawable/ic_close" />
+            app:srcCompat="@drawable/ic_close" />
     </LinearLayout>
 
     <include

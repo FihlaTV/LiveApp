@@ -1,7 +1,6 @@
 package com.hnust.liveapp.util;
 
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.AudioFormat;
@@ -10,7 +9,9 @@ import android.media.MediaRecorder;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
-import android.support.v7.app.AlertDialog;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by xiongxuesong-pc on 2016/6/23.
@@ -130,7 +131,7 @@ public class PermissionsCheckUtil {
      * @param activity
      * @param message  显示缺失权限提示说明
      */
-    public static void showMissingPermissionDialog(final Activity activity, String message) {
+    public static void showMissingPermissionDialog(final AppCompatActivity activity, String message) {
         boolean canSetting = false;
         String mtyb = Build.BRAND;//手机品牌
         for (int i = 0; i < PHONE_MTYB.length; i++) {
@@ -167,7 +168,7 @@ public class PermissionsCheckUtil {
     }
 
     // 启动应用的设置
-    public static void startAppSettings(Activity activity) {
+    public static void startAppSettings(AppCompatActivity activity) {
         Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
         intent.setData(Uri.parse("package:" + activity.getPackageName()));
         activity.startActivityForResult(intent, SETTING_APP);

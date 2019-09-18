@@ -22,7 +22,7 @@
             android:layout_margin="10dp"
             android:orientation="vertical">
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,9 +34,9 @@
                     android:inputType="text"
                     android:maxLines="1" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
                     android:inputType="textPassword"
                     android:maxLines="1" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <Button
@@ -142,6 +142,6 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:src="@mipmap/qq" />
+            app:srcCompat="@mipmap/qq" />
     </LinearLayout>
 </LinearLayout>

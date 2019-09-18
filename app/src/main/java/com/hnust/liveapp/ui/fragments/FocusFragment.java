@@ -2,24 +2,20 @@ package com.hnust.liveapp.ui.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.hnust.liveapp.R;
 import com.hnust.liveapp.bean.RoomInfo;
 import com.hnust.liveapp.contract.FocusContract;
-import com.hnust.liveapp.contract.LivesContract;
 import com.hnust.liveapp.model.UserModelImpl;
 import com.hnust.liveapp.presenter.FocusPresenterImpl;
-import com.hnust.liveapp.presenter.LivesPresenterImpl;
 import com.hnust.liveapp.ui.activitys.LoginActivity;
 import com.hnust.liveapp.ui.adapter.RecyclerViewAdapter;
 import com.hnust.liveapp.util.GlobalConfig;
@@ -30,7 +26,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by yonglong on 2017/3/28.

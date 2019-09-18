@@ -11,10 +11,10 @@ import com.dl7.player.danmaku.BiliDanmukuParser;
 import com.hnust.liveapp.R;
 import com.hnust.liveapp.ui.adapter.DanamakuAdapter;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
-import com.shuyu.gsyvideoplayer.GSYVideoPlayer;
 import com.shuyu.gsyvideoplayer.utils.Debuger;
-import com.shuyu.gsyvideoplayer.video.GSYBaseVideoPlayer;
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
+import com.shuyu.gsyvideoplayer.video.base.GSYBaseVideoPlayer;
+import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -272,7 +272,7 @@ public class DanmakuVideoPlayer extends StandardGSYVideoPlayer {
      * 弹幕偏移
      */
     private void resolveDanmakuSeek(DanmakuVideoPlayer gsyVideoPlayer, long time) {
-        if (GSYVideoManager.instance().getMediaPlayer() != null && mHadPlay
+        if (GSYVideoManager.instance() != null && mHadPlay
                 && gsyVideoPlayer.getDanmakuView() != null && gsyVideoPlayer.getDanmakuView().isPrepared()) {
             gsyVideoPlayer.getDanmakuView().seekTo(time);
         }

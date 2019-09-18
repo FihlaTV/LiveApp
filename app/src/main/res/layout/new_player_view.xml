@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/app_video_box"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -64,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
-            android:src="@drawable/simple_player_circle_outline_white_36dp" />
+            app:srcCompat="@drawable/simple_player_circle_outline_white_36dp" />
     </LinearLayout>
     <!-- 网络提示-->
     <LinearLayout
@@ -166,7 +167,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/qcloud_player_icon_audio_vol_mute" />
+                app:srcCompat="@drawable/qcloud_player_icon_audio_vol_mute" />
 
             <SeekBar
                 android:id="@+id/simple_player_volume_controller"
@@ -177,7 +178,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/qcloud_player_icon_audio_vol" />
+                app:srcCompat="@drawable/qcloud_player_icon_audio_vol" />
         </LinearLayout>
 
         <LinearLayout
@@ -192,7 +193,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:padding="5dp"
-                android:src="@drawable/qcloud_player_icon_brightness" />
+                app:srcCompat="@drawable/qcloud_player_icon_brightness" />
 
             <SeekBar
                 android:id="@+id/simple_player_brightness_controller"
@@ -203,7 +204,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/qcloud_player_icon_brightness" />
+                app:srcCompat="@drawable/qcloud_player_icon_brightness" />
         </LinearLayout>
 
     </LinearLayout>
@@ -232,7 +233,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="8dp"
-        android:src="@drawable/simple_player_center_play" />
+        app:srcCompat="@drawable/simple_player_center_play" />
 
 </RelativeLayout>
 

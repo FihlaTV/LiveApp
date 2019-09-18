@@ -6,10 +6,11 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,13 +37,11 @@ import com.hnust.liveapp.bean.Message;
 import com.hnust.liveapp.bean.User;
 import com.hnust.liveapp.model.UserModelImpl;
 import com.hnust.liveapp.ui.activitys.HosterActivity;
-import com.hnust.liveapp.ui.activitys.live.IjkPlayerActivity;
 import com.hnust.liveapp.ui.adapter.MessageAdapter;
 import com.hnust.liveapp.util.DisplayUtil;
 import com.hnust.liveapp.widget.MagicTextView;
 import com.hnust.liveapp.widget.SoftKeyBoardListener;
 import com.hnust.liveapp.widget.SwitchIconView;
-import com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -478,7 +477,7 @@ public class LayerFragment1 extends Fragment {
      * 软键盘显示与隐藏的监听
      */
     private void softKeyboardListnenr() {
-        SoftKeyBoardListener.setListener(getActivity(), new SoftKeyBoardListener.OnSoftKeyBoardChangeListener() {
+        SoftKeyBoardListener.setListener((AppCompatActivity) getActivity(), new SoftKeyBoardListener.OnSoftKeyBoardChangeListener() {
             @Override
             public void keyBoardShow(int height) {/*软键盘显示：执行隐藏title动画，并修改listview高度和装载礼物容器的高度*/
                 dynamicChangeListviewH(100);

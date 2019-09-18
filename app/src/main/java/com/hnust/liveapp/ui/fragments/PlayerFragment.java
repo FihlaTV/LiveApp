@@ -1,52 +1,25 @@
 package com.hnust.liveapp.ui.fragments;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.text.format.DateFormat;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.OvershootInterpolator;
-import android.view.animation.TranslateAnimation;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.hnust.liveapp.R;
-import com.hnust.liveapp.ui.activitys.PlayerForAppActivity;
-import com.hnust.liveapp.ui.adapter.AudienceAdapter;
-import com.hnust.liveapp.ui.adapter.MessageAdapter;
 import com.hnust.liveapp.util.DisplayUtil;
-import com.hnust.liveapp.widget.HorizontalListView;
-import com.hnust.liveapp.widget.MagicTextView;
 import com.hnust.liveapp.widget.SoftKeyBoardListener;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * 该Fragment是用于dialogFragment中的pager，为了实现滑动隐藏交互Fragment的
@@ -138,7 +111,7 @@ public class PlayerFragment extends Fragment {
      * 软键盘显示与隐藏的监听
      */
     private void softKeyboardListnenr() {
-        SoftKeyBoardListener.setListener(getActivity(), new SoftKeyBoardListener.OnSoftKeyBoardChangeListener() {
+        SoftKeyBoardListener.setListener((AppCompatActivity) getActivity(), new SoftKeyBoardListener.OnSoftKeyBoardChangeListener() {
             @Override
             public void keyBoardShow(int height) {/*软键盘显示：执行隐藏title动画，并修改listview高度和装载礼物容器的高度*/
                 dynamicChangeH(height);

@@ -15,7 +15,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:elevation="1dp"
-            android:src="@mipmap/ic_chicken" />
+            app:srcCompat="@mipmap/ic_chicken" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -75,6 +75,6 @@
         app:outerShadowColor="@color/white"
         app:strokeColor="@color/deepOrange"
         app:strokeJoinStyle="round"
-        app:strokeWidth="3" />
+        app:stroke_width="3" />
 
 </RelativeLayout>

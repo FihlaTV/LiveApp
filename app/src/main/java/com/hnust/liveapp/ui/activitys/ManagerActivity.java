@@ -1,19 +1,17 @@
 package com.hnust.liveapp.ui.activitys;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.hnust.liveapp.R;
 import com.hnust.liveapp.bean.RoomInfo;
-import com.hnust.liveapp.contract.HistoryContract;
 import com.hnust.liveapp.contract.ManagerContract;
-import com.hnust.liveapp.presenter.HistoryPresenter;
 import com.hnust.liveapp.presenter.ManagerPresenter;
 import com.hnust.liveapp.ui.adapter.RecyclerViewAdapter;
 import com.hnust.liveapp.util.GlobalConfig;

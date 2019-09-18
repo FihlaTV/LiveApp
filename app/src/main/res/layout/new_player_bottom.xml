@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:padding="8dp"
-            android:src="@drawable/simple_player_arrow_white_24dp" />
+            app:srcCompat="@drawable/simple_player_arrow_white_24dp" />
 
         <EditText
             android:id="@+id/et_top_danmu"
@@ -74,13 +74,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:src="@drawable/ic_card_giftcard_white_24dp" />
+                app:srcCompat="@drawable/ic_card_giftcard_white_24dp" />
 
             <ImageView
                 android:id="@+id/fullscreen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_fullscreen" />
+                app:srcCompat="@drawable/ic_fullscreen" />
         </LinearLayout>
 
     </LinearLayout>

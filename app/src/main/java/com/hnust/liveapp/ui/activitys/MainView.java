@@ -2,16 +2,14 @@ package com.hnust.liveapp.ui.activitys;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.Toast;
 
 import com.hnust.liveapp.R;
@@ -19,7 +17,6 @@ import com.hnust.liveapp.contract.MainContract;
 import com.hnust.liveapp.ui.adapter.ViewPagerAdapter;
 import com.hnust.liveapp.ui.fragments.CateFragment;
 import com.hnust.liveapp.ui.fragments.FocusFragment;
-import com.hnust.liveapp.ui.fragments.LiveFragment;
 import com.hnust.liveapp.ui.fragments.MainFragment;
 import com.hnust.liveapp.ui.fragments.UserFragment;
 import com.hnust.liveapp.util.BottomNavigationViewHelper;
@@ -77,7 +74,7 @@ public class MainView extends AppCompatActivity implements MainContract.View {
         ButterKnife.bind(this);
 
         mBottomNav.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        BottomNavigationViewHelper.disableShiftMode(mBottomNav);
+//        BottomNavigationViewHelper.disableShiftMode(mBottomNav);
 
 //        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 //            @Override

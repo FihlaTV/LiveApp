@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="8dp"
-            android:src="@drawable/ic_card_giftcard_white_24dp" />
+            app:srcCompat="@drawable/ic_card_giftcard_white_24dp" />
 
 
         <Button
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:padding="8dp"
-        android:src="@drawable/ic_fullscreen" />
+        app:srcCompat="@drawable/ic_fullscreen" />
 
 </RelativeLayout>
 

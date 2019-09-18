@@ -43,9 +43,7 @@ public class DBService {
             cursor = db.rawQuery(sql, null);
             if (cursor != null && cursor.getCount() > 0) {
                 while (cursor.moveToNext()) {
-                    CateInfo cateInfo = new CateInfo();
-                    cateInfo.setId(cursor.getInt(0));
-                    cateInfo.setType(cursor.getString(1));
+                    CateInfo cateInfo = new CateInfo(cursor.getInt(0),cursor.getString(1));
                     list.add(cateInfo);
 
                     Log.e("DDDDDDDDDDD", "Exception" + cateInfo.toString());

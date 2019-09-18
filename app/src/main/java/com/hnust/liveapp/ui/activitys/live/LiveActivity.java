@@ -3,22 +3,21 @@ package com.hnust.liveapp.ui.activitys.live;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.AppCompatActivity;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
+import androidx.core.widget.NestedScrollView;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import com.hnust.liveapp.R;
 import com.hnust.liveapp.util.SampleListener;
 import com.hnust.liveapp.widget.DanmakuVideoPlayer;
-import com.shuyu.gsyvideoplayer.GSYVideoPlayer;
+import com.shuyu.gsyvideoplayer.GSYVideoManager;
 import com.shuyu.gsyvideoplayer.listener.LockClickListener;
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
+import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -98,7 +97,7 @@ public class LiveActivity extends AppCompatActivity {
         });
 
 
-        danmakuVideoPlayer.setStandardVideoAllCallBack(new SampleListener() {
+        danmakuVideoPlayer.setVideoAllCallBack(new SampleListener() {
             @Override
             public void onPrepared(String url, Object... objects) {
                 super.onPrepared(url, objects);
@@ -144,7 +143,7 @@ public class LiveActivity extends AppCompatActivity {
             orientationUtils.backToProtVideo();
         }
 
-        if (StandardGSYVideoPlayer.backFromWindowFull(this)) {
+        if (GSYVideoManager.backFromWindowFull(this)) {
             return;
         }
         super.onBackPressed();
@@ -166,7 +165,7 @@ public class LiveActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        GSYVideoPlayer.releaseAllVideos();
+        GSYVideoManager.releaseAllVideos();
         if (orientationUtils != null)
             orientationUtils.releaseListener();
     }
@@ -183,7 +182,7 @@ public class LiveActivity extends AppCompatActivity {
             } else {
                 //新版本isIfCurrentIsFullscreen的标志位内部提前设置了，所以不会和手动点击冲突
                 if (danmakuVideoPlayer.isIfCurrentIsFullscreen()) {
-                    StandardGSYVideoPlayer.backFromWindowFull(this);
+                    GSYVideoManager.backFromWindowFull(this);
                 }
                 if (orientationUtils != null) {
                     orientationUtils.setEnable(true);

@@ -1,14 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "com.hnust.liveapp"
-        minSdkVersion 16
-        targetSdkVersion 25
+        minSdkVersion 21
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0.2"
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
     }
 //    sourceSets {
 //        main {
@@ -22,58 +27,80 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    aaptOptions.cruncherEnabled = false
-    aaptOptions.useNewCruncher = false
+//    aaptOptions.cruncherEnabled = false
+//    aaptOptions.useNewCruncher = false
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    packagingOptions {       //避免重复导入库
+        exclude 'lib/armeabi-v7a/libijkplayer.so'
+        exclude 'lib/x86/libijkplayer.so'
+        exclude 'lib/x86_64/libijkplayer.so'
+        exclude 'lib/armeabi/libijkplayer.so'
+        exclude 'lib/arm64-v8a/libijkplayer.so'
+
+        exclude 'lib/x86/libijksdl.so'
+        exclude 'lib/x86_64/libijksdl.so'
+        exclude 'lib/arm64-v8a/libijksdl.so'
+        exclude 'lib/armeabi/libijksdl.so'
+        exclude 'lib/armeabi-v7a/libijksdl.so'
+
+        exclude 'lib/arm64-v8a/libijkffmpeg.so'
+        exclude 'lib/armeabi-v7a/libijkffmpeg.so'
+        exclude 'lib/x86_64/libijkffmpeg.so'
+        exclude 'lib/x86/libijkffmpeg.so'
+        exclude 'lib/armeabi/libijkffmpeg.so'
+    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
+    implementation 'com.github.CarGuo:GSYVideoPlayer:7.1.0'
+    implementation 'com.dou361.ijkplayer:jjdxm-ijkplayer:1.0.6'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.wuxiaolong.pullloadmorerecyclerview:library:1.1.2'
+    implementation 'com.zhy:mpermission-api:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.laifeng:sopcast-sdk:1.0.4'
 
-
-    compile 'com.github.CarGuo:GSYVideoPlayer:v1.6.5'
-    compile 'com.dou361.ijkplayer:jjdxm-ijkplayer:1.0.6'
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.android.support:design:25.0.0'
-    compile 'com.android.support:support-vector-drawable:25.0.0'
-    compile 'com.android.support:cardview-v7:25.0.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.wuxiaolong.pullloadmorerecyclerview:library:1.1.2'
-    compile 'com.zhy:mpermission-api:1.0.0'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.laifeng:sopcast-sdk:1.0.4'
-
-    compile 'com.codemybrainsout.onboarding:onboarder:1.0.3'
-    compile 'com.youth.banner:banner:1.4.9'  //最新版本
+    implementation 'com.codemybrainsout.onboarding:onboarder:1.0.3'
+    implementation 'com.youth.banner:banner:1.4.9'  //最新版本
     //buff
-    compile 'com.jakewharton:butterknife:8.5.1'
-
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
 
     // retrofit
-    compile 'com.squareup.okhttp3:okhttp:3.6.0'
-    compile 'com.squareup.retrofit2:retrofit:2.2.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.0.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
 
 
     //rx
-    compile 'io.reactivex:rxjava:1.1.0'
-    compile 'io.reactivex:rxandroid:1.1.0'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'io.reactivex:rxjava:1.2.0'
+    implementation 'io.reactivex:rxandroid:1.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
 
     //弹幕
-    compile 'com.github.ctiao:DanmakuFlameMaster:0.5.3'
+//    implementation 'com.github.ctiao:DanmakuFlameMaster:0.6.2'
     //socket
-    compile ('io.socket:socket.io-client:0.8.3') {
+    implementation ('io.socket:socket.io-client:0.8.3') {
         // excluding org.json which is provided by Android
         exclude group: 'org.json', module: 'json'
     }
-    compile 'com.github.paradoxie:SignCalender:0.1'
+//    implementation 'com.github.paradoxie:SignCalender:0.1'
 
-    testCompile 'junit:junit:4.12'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    compile project(path: ':playerview')
+    testImplementation 'junit:junit:4.12'
+    implementation project(path: ':playerview')
 }

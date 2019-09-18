@@ -1,6 +1,5 @@
 package com.hnust.liveapp.util;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,14 +7,12 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.Display;
 
-import java.io.BufferedOutputStream;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.UUID;
-
-import static com.dl7.player.utils.SDCardUtils.getSDPath;
 
 /**
  * Created by yonglong on 2017/5/24.
@@ -66,7 +63,7 @@ public class FileUtils {
      */
     public Bitmap cutPictureSize(String filePath) {
 
-        Display mDisplay = ((Activity) context).getWindowManager().getDefaultDisplay();
+        Display mDisplay = ((AppCompatActivity) context).getWindowManager().getDefaultDisplay();
         int width = mDisplay.getWidth();
         int height = mDisplay.getHeight();
 

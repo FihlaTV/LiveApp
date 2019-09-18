@@ -2,11 +2,11 @@ package com.hnust.liveapp.ui.activitys;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.Nullable;
+import com.google.android.material.textfield.TextInputLayout;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.Log;
@@ -18,28 +18,14 @@ import android.widget.Toast;
 import com.hnust.liveapp.R;
 import com.hnust.liveapp.api.ApiManager;
 import com.hnust.liveapp.api.ApiManagerService;
-import com.hnust.liveapp.bean.GsonInfo;
 import com.hnust.liveapp.bean.GsonRoomInfo;
 import com.hnust.liveapp.bean.User;
-import com.hnust.liveapp.contract.UserContract;
 import com.hnust.liveapp.model.UserModelImpl;
-import com.hnust.liveapp.presenter.UserPresenterImpl;
 import com.hnust.liveapp.ui.activitys.live.PreLiveActivity;
-import com.hnust.liveapp.util.GlobalConfig;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;

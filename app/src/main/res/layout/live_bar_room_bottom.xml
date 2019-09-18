@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout_bottom"
     android:layout_width="match_parent"
     android:layout_height="50dp"
@@ -35,7 +36,7 @@
             android:layout_centerVertical="true"
             android:background="@drawable/bg_radius_bottom_white"
             android:gravity="center"
-            android:src="@drawable/ic_close"
+            app:srcCompat="@drawable/ic_close"
             android:textColor="#333" />
 
 

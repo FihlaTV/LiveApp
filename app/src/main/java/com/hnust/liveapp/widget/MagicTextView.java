@@ -19,7 +19,6 @@ import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.util.Pair;
-import android.widget.TextView;
 
 import com.hnust.liveapp.R;
 
@@ -38,7 +37,7 @@ import java.util.WeakHashMap;
  * AuthorPhone：nothing
  * Created by 2016/9/22.
  */
-public class MagicTextView extends android.support.v7.widget.AppCompatTextView {
+public class MagicTextView extends androidx.appcompat.widget.AppCompatTextView {
 
     private ArrayList<Shadow> outerShadows;
     private ArrayList<Shadow> innerShadows;
@@ -111,7 +110,7 @@ public class MagicTextView extends android.support.v7.widget.AppCompatTextView {
             }
 
             if(a.hasValue(R.styleable.MagicTextView_strokeColor)){
-                float strokeWidth = a.getFloat(R.styleable.MagicTextView_strokeWidth, 1);
+                float strokeWidth = a.getFloat(R.styleable.MagicTextView_stroke_width, 1f);
                 int strokeColor = a.getColor(R.styleable.MagicTextView_strokeColor, 0xff000000);
                 float strokeMiter = a.getFloat(R.styleable.MagicTextView_strokeMiter, 10);
                 Join strokeJoin = null;

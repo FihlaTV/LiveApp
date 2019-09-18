@@ -4,13 +4,13 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,9 +29,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hnust.liveapp.R;
-import com.hnust.liveapp.ui.activitys.HosterActivity;
 import com.hnust.liveapp.ui.activitys.PlayerForAppActivity;
-import com.hnust.liveapp.ui.adapter.AudienceAdapter;
 import com.hnust.liveapp.ui.adapter.MessageAdapter;
 import com.hnust.liveapp.util.DisplayUtil;
 import com.hnust.liveapp.widget.HorizontalListView;
@@ -388,7 +386,7 @@ public class LayerFragment extends Fragment implements View.OnClickListener {
      * 软键盘显示与隐藏的监听
      */
     private void softKeyboardListnenr() {
-        SoftKeyBoardListener.setListener(getActivity(), new SoftKeyBoardListener.OnSoftKeyBoardChangeListener() {
+        SoftKeyBoardListener.setListener((AppCompatActivity) getActivity(), new SoftKeyBoardListener.OnSoftKeyBoardChangeListener() {
             @Override
             public void keyBoardShow(int height) {/*软键盘显示：执行隐藏title动画，并修改listview高度和装载礼物容器的高度*/
                 animateToHide();

@@ -30,6 +30,11 @@ public class CateInfo {
         this.type = type;
     }
 
+    public CateInfo(int id, String type) {
+        this.id = id;
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "CateInfo{" +

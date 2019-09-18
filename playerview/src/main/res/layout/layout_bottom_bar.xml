@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_recover_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/shape_video_bg"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:text="还原屏幕"
+        android:textColor="@color/recover_screen_text"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/control_bar_height"
+        android:layout_gravity="bottom">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/iv_fullscreen"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/sel_item_background"
+                android:padding="10dp"
+                app:srcCompat="@drawable/sel_btn_play" />
+
+
+            <TextView
+                android:id="@+id/tv_open_edit_danmaku"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_send_danmaku_bg"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="发射弹幕"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_danmaku_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/sel_item_background"
+                android:padding="5dp"
+                app:srcCompat="@drawable/sel_btn_danmaku_control"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/sel_item_background"
+            android:padding="5dp"
+            app:srcCompat="@drawable/sel_btn_fullscreen" />
+
+    </RelativeLayout>
+</merge>

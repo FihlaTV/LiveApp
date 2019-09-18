@@ -1,9 +1,10 @@
 package com.hnust.liveapp.widget;
 
-import android.app.Activity;
 import android.graphics.Rect;
 import android.view.View;
 import android.view.ViewTreeObserver;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 该类用于监听软键盘是否显示并获取其高度
@@ -23,7 +24,7 @@ public class SoftKeyBoardListener {
     private int rootViewVisibleHeight;/*纪录根视图的显示高度*/
     private OnSoftKeyBoardChangeListener onSoftKeyBoardChangeListener;
 
-    public SoftKeyBoardListener(Activity activity) {
+    public SoftKeyBoardListener(AppCompatActivity activity) {
         /*获取activity的根视图*/
         rootView = activity.getWindow().getDecorView();
         /*监听视图树中全局布局发生改变或者视图树中的某个视图的可视状态发生改变*/
@@ -71,7 +72,7 @@ public class SoftKeyBoardListener {
         void keyBoardHide(int height);
     }
 
-    public static void setListener(Activity activity, OnSoftKeyBoardChangeListener onSoftKeyBoardChangeListener) {
+    public static void setListener(AppCompatActivity activity, OnSoftKeyBoardChangeListener onSoftKeyBoardChangeListener) {
         SoftKeyBoardListener softKeyBoardListener = new SoftKeyBoardListener(activity);
         softKeyBoardListener.setOnSoftKeyBoardChangeListener(onSoftKeyBoardChangeListener);
     }

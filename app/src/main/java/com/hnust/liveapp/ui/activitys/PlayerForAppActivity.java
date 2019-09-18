@@ -1,19 +1,17 @@
 package com.hnust.liveapp.ui.activitys;
 
 import android.content.Context;
-import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.PowerManager;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.dou361.ijkplayer.listener.OnPlayerBackListener;
 import com.dou361.ijkplayer.listener.OnShowThumbnailListener;
-import com.dou361.ijkplayer.widget.PlayStateParams;
 import com.dou361.ijkplayer.widget.PlayerView;
 import com.hnust.liveapp.R;
 import com.hnust.liveapp.ui.fragments.LayerFragment;

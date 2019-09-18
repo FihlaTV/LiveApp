@@ -52,7 +52,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:padding="10dp"
-                        android:src="@drawable/ic_navigate_next" />
+                        app:srcCompat="@drawable/ic_navigate_next" />
                 </RelativeLayout>
 
                 <View
@@ -84,7 +84,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:padding="10dp"
-                        android:src="@drawable/ic_navigate_next" />
+                        app:srcCompat="@drawable/ic_navigate_next" />
                 </RelativeLayout>
 
                 <View
@@ -119,7 +119,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:padding="10dp"
-                        android:src="@drawable/ic_navigate_next" />
+                        app:srcCompat="@drawable/ic_navigate_next" />
                 </RelativeLayout>
 
                 <View
@@ -152,7 +152,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:padding="10dp"
-                        android:src="@drawable/ic_navigate_next" />
+                        app:srcCompat="@drawable/ic_navigate_next" />
                 </RelativeLayout>
 
 
