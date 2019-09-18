@@ -17,15 +17,6 @@ import java.util.Queue;
 
 /**
  * 横向listview,用于显示观众列表的
- * <p>
- * Success is the sum of small efforts, repeated day in and day out.
- * 成功就是日复一日那一点点小小努力的积累。
- * AndroidGroup：158423375
- * Author：Johnny
- * AuthorQQ：956595454
- * AuthorWX：Qiang_it
- * AuthorPhone：nothing
- * Created by 2016/9/22.
  */
 public class HorizontalListView extends AdapterView<ListAdapter> {
 

@@ -4,15 +4,6 @@ import android.content.Context;
 
 /**
  * dp、sp 转换为 px 的工具类
- *
- * Success is the sum of small efforts, repeated day in and day out.
- * 成功就是日复一日那一点点小小努力的积累。
- * AndroidGroup：158423375
- * Author：Johnny
- * AuthorQQ：956595454
- * AuthorWX：Qiang_it
- * AuthorPhone：nothing
- * Created by 2016/9/22.
  */
 public class DisplayUtil {
 
